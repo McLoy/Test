@@ -13,14 +13,24 @@ public class FeedingSchedule {
 //        }
 //        System.out.println(x);
 
-        System.out.println("a");
-        try{
-            System.out.println("b");
-            throw  new IllegalArgumentException();
-        } catch (RuntimeException e){
-            System.out.println("c");
-        } finally {
-            System.out.println("d");
-        }
-        System.out.println("e");
+//        System.out.println("a");
+//        try{
+//            System.out.println("b");
+//            throw  new IllegalArgumentException();
+//        } catch (RuntimeException e){
+//            System.out.println("c");
+//        } finally {
+//            System.out.println("d");
+//        }
+//        System.out.println("e");
+
+        int x = 5, j = 0;
+        OUTER: for (int i=0;i<3;)
+            INNER: do{
+                i++; x++;
+                if(x>10) break INNER;
+                x +=4;
+                j++;
+            } while (j <= 2);
+        System.out.println(x);
     }}
